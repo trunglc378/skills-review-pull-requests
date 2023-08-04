@@ -89,7 +89,7 @@
     input.addEventListener("click", handleClickInput);
   }
 
-  // The user chose a box, check for win, robot turn, check for win
+  // The user chose a box, check for win, robot turn, check for win.
   function handleClickInput(evt) {
     evt.target.closest("td").innerHTML = HUMAN;
     if (hasWin()) {
