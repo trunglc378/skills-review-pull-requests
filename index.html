@@ -50,8 +50,8 @@
 <h2 hidden>Game over, refresh to play again 🧑‍💻 🤖!</h2>
 
 <script>
-  // Initialization
-  const boxes = Array.from(document.querySelectorAll("td"));
+  // Initialization code
+  const boxes = Array.from(document.querySelectorAll("th"));
   const inputs = Array.from(document.querySelectorAll("[type=checkbox]"));
   const rows = [1, 2, 3].map((n) =>
     Array.from(document.querySelectorAll(`tr:nth-child(${n}) td`))
@@ -89,9 +89,9 @@
     input.addEventListener("click", handleClickInput);
   }
 
-  // The user chose a box, check for win, robot turn, check for win
+  // The user chose a box, check for win, robot turn, check for win.
   function handleClickInput(evt) {
-    evt.target.closest("td").innerHTML = HUMAN;
+    evt.target.closest("th").innerHTML = HUMAN;
     if (hasWin()) {
       return endGame();
     }
